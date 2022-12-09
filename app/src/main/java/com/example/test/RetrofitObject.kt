@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitObject {
 
-    private fun getRetrofit() : Retrofit {
+    private fun getLectureRetrofit() : Retrofit {
         return Retrofit
             .Builder()
             .baseUrl("http://10.0.2.2:8080")
@@ -15,7 +15,7 @@ object RetrofitObject {
     }
 
     fun getLectureInfoApi() : LectureService {
-        return getRetrofit().create(LectureService::class.java)
+        return getLectureRetrofit().create(LectureService::class.java)
     }
 
 }
